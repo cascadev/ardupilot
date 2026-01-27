@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0369a1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="droneGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="240" fill="url(#bgGradient)"/>
+
+  <!-- Outer ring -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.3"/>
+
+  <!-- Drone body -->
+  <g transform="translate(256, 256)">
+    <!-- Center body -->
+    <ellipse cx="0" cy="0" rx="40" ry="25" fill="url(#droneGradient)"/>
+
+    <!-- Arms -->
+    <g stroke="#ffffff" stroke-width="8" stroke-linecap="round">
+      <line x1="-30" y1="-15" x2="-80" y2="-65"/>
+      <line x1="30" y1="-15" x2="80" y2="-65"/>
+      <line x1="-30" y1="15" x2="-80" y2="65"/>
+      <line x1="30" y1="15" x2="80" y2="65"/>
+    </g>
+
+    <!-- Propeller circles -->
+    <g fill="none" stroke="#ffffff" stroke-width="3">
+      <circle cx="-80" cy="-65" r="35"/>
+      <circle cx="80" cy="-65" r="35"/>
+      <circle cx="-80" cy="65" r="35"/>
+      <circle cx="80" cy="65" r="35"/>
+    </g>
+
+    <!-- Propeller hubs -->
+    <g fill="#ffffff">
+      <circle cx="-80" cy="-65" r="8"/>
+      <circle cx="80" cy="-65" r="8"/>
+      <circle cx="-80" cy="65" r="8"/>
+      <circle cx="80" cy="65" r="8"/>
+    </g>
+
+    <!-- Direction indicator -->
+    <polygon points="0,-35 -8,-25 8,-25" fill="#22c55e"/>
+  </g>
+
+  <!-- Compass markings -->
+  <g fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">
+    <text x="256" y="60">N</text>
+    <text x="452" y="264">E</text>
+    <text x="256" y="468">S</text>
+    <text x="60" y="264">W</text>
+  </g>
+
+  <!-- Compass tick marks -->
+  <g stroke="#ffffff" stroke-width="2" opacity="0.5">
+    <line x1="256" y1="30" x2="256" y2="45"/>
+    <line x1="482" y1="256" x2="467" y2="256"/>
+    <line x1="256" y1="482" x2="256" y2="467"/>
+    <line x1="30" y1="256" x2="45" y2="256"/>
+  </g>
+</svg>
